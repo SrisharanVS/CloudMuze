@@ -15,7 +15,9 @@ export default function Component() {
         // return <h1>Please Log in....</h1>;
     // }
 
-    return <StreamView creatorId={session.data.user.id} playVideo={true} />;
+    // return <StreamView creatorId={session.data.user.id} playVideo={true} />;
+    return <StreamView creatorId={session.data?.user?.id ?? ""} playVideo={true} />;
+
 }
 
 export const dynamic = 'auto'
